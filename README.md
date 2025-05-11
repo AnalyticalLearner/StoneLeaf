@@ -184,7 +184,7 @@ Coming soon: the `examples/` folder will contain:
 
 ## 📄 License
 
-This project is licensed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
+This project is licensed under the **MIT License**. See [`LICENSE`](https://mit-license.org/) for details.
 
 ---
 
