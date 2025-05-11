@@ -167,7 +167,7 @@ To share your Stoneleaf instance:
 - Create magnet links to share archives
 - Support `wget`, `curl`, or `httrack` for retrieval
 
-Help others replicate or fork your collection — **Stoneleaf is designed for duplication.**
+**Stoneleaf is designed for duplication.**
 
 ---
 
