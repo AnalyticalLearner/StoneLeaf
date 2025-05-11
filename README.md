@@ -192,7 +192,6 @@ This project is licensed under the **MIT License**. See [`LICENSE`](https://mit-
 
 - [Johnny.Decimal System](https://johnnydecimal.com/)
 - [The Gopher Project](https://gopher.floodgap.com/)
-- [Slow Web Movement](https://www.sloww.co/slow-web/)
 
 ---
 
