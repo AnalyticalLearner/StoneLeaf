@@ -15,6 +15,7 @@ Stoneleaf is a terminal-based, lightweight information system framework designed
 
 Inspired by organizational systems like Dewey Decimal and Johnny.Decimal, Stoneleaf turns content libraries into navigable, intuitive archives. Whether you're running it on a Raspberry Pi, hosting via Gopher, or accessing via `lynx`, Stoneleaf is designed for permanence and clarity.
 
+A StoneLeaf library is not just a bunch of folders on an old web server, rather each library is a declaration of the importance of the data within.     
 ---
 
 ## 🧩 Key Features
@@ -55,20 +56,31 @@ Inspired by organizational systems like Dewey Decimal and Johnny.Decimal, Stonel
 
 - [RFC 1945 – HTTP/1.0](https://tools.ietf.org/html/rfc1945)
 - [RFC 1866 – HTML 2.0](https://tools.ietf.org/html/rfc1866)
+- [Apache Web Server](https://httpd.apache.org/)
 - `python3 -m http.server` – Simple local hosting
-- [BusyBox HTTPd](https://busybox.net/downloads/BusyBox.html)
 - [Darkhttpd](https://unix4lyfe.org/darkhttpd)
+
+---
+
+### Required Packages
+These packages are *not* included in this repository.
+
+- Web server (Apache 2, Nginx, etc.)
+- tree
+- rsync
+- openssh-server
 
 ---
 
 ## 📚 Philosophy
 
-Rebelling against the age of constant connectivity, fleeting content, and paywalls, Stoneleaf offers an alternative: a **resilient, slow, and intentional archive**. It resists complexity by embracing simplicity, and it values authorship over algorithm.
+Rebelling against the age of constant connectivity, fleeting content, and paywalls, Stoneleaf offers an alternative: a **resilient, static (aka stable), and intentional archive**. It resists complexity by embracing simplicity, and it values authorship over algorithm.
 
-- Designed for environments with unstable power, poor connectivity, or old hardware
-- Information is curated and organized for long-term utility — not real-time noise
-- Promotes digital stewardship: thoughtful curation over hasty updates
-- Transparent and understandable by anyone
+- Designed for environments with unstable power, poor connectivity, or old hardware.
+- Information is curated and organized for long-term utility and not real-time noise.
+- Promotes digital stewardship: thoughtful curation over hasty updates.
+- Transparent and understandable by anyone.
+- Seeks to reignite the value of information before the information is locked away.
 
 > “The structure is not just a file tree — it's a mental map.”
 
@@ -92,20 +104,11 @@ library/
 ...
 ```
 
-### 🧾 Generate Index
-
-Use this command to generate an index file of your tree:
-
-```bash
-tree > sldirtree.csv && mv sldirtree.csv 00.reference/00.00.index/
-```
-This file should then be placed in the `00` directory.
-
 ---
 
 ## 🏗 Build the Initial Library
 
-Run the included `dirgen.sh` script to create a blank scaffold (10,100 folders total):
+Run the included `dirgen.sh` script in your destination folder to create a blank scaffold (10,100 folders total). The script content is below.
 
 ```bash
 #!/bin/bash
@@ -121,6 +124,17 @@ done
 ```
 
 Place the provided `index.php` or an HTML index file in the root directory to enable browsing.
+
+---
+
+### 🧾 Generate Index
+
+Use this command to generate an index file of your tree:
+
+```bash
+tree > dir.tree.txt && mv dir.tree.txt 00.reference/00.00.index/
+```
+This file should then be placed in the `00` directory.
 
 ---
 
@@ -150,9 +164,9 @@ Ensure `rsync` is installed on the remote machine.
 
 ## 📥 Populating the Library
 
-- Prefer `.txt`, `.md`, or `.html` for maximum compatibility
-- Avoid dynamic content or scripts
-- Audio or video files can be added but will need to be downloaded to play unless browser is capable
+- Prefer `.txt`, `.md`, or `.html` for maximum compatibility.
+- Avoid dynamic content or scripts.
+- Audio or video files can be added but will need to be downloaded to be played unless browser is capable and serving from HTTP.
 
 Keep it readable with terminal tools and future-proof for minimal devices.
 
@@ -162,23 +176,20 @@ Keep it readable with terminal tools and future-proof for minimal devices.
 
 To share your Stoneleaf instance:
 
-- Host publicly via HTTP or gopher
-- Offer `.zip` archives for download
-- Create magnet links to share archives
-- Support `wget`, `curl`, or `httrack` for retrieval
+- Host publicly via HTTP(s) or gopher.
+- Offer `.zip` archives for download.
+- Create magnet links to share archives.
+
 
 **Stoneleaf is designed for duplication.**
 
 ---
 
 ## 📁 Examples
+These files are in the `examples` directory.
 
-Coming soon: the `examples/` folder will contain:
-
-- Sample index HTML file
-- Example Gophermap
-- Text article template
-- Screenshot of `lynx` browsing a Stoneleaf library
+- **directory.structure.ods**: This is a LibreCalc spreadsheet with a list of all the base directory names created by `dirgen.sh`. This file can help to plan out the named strcuture of your StoneLeaf library.
+The last column is *CONCATENATED* to make it easy to copy the column to a text file or other source.
 
 ---
 
