@@ -15,7 +15,7 @@ Stoneleaf is a terminal-based, lightweight information system framework designed
 
 Inspired by organizational systems like Dewey Decimal and Johnny.Decimal, Stoneleaf turns content libraries into navigable, intuitive archives. Whether you're running it on a Raspberry Pi, hosting via Gopher, or accessing via `lynx`, Stoneleaf is designed for permanence and clarity.
 
-A StoneLeaf library is not just a bunch of folders on an old web server, rather each library is a declaration of the importance of the data within.     
+A StoneLeaf library is not just a bunch of folders on a web server, rather each library is a declaration of the importance of the data within.     
 ---
 
 ## 🧩 Key Features
@@ -72,7 +72,7 @@ These packages are *not* included in this repository.
 
 ---
 
-## 📚 Philosophy
+## 📚 Philosophy of Use
 
 Rebelling against the age of constant connectivity, fleeting content, and paywalls, Stoneleaf offers an alternative: a **resilient, static (aka stable), and intentional archive**. It resists complexity by embracing simplicity, and it values authorship over algorithm.
 
@@ -80,9 +80,20 @@ Rebelling against the age of constant connectivity, fleeting content, and paywal
 - Information is curated and organized for long-term utility and not real-time noise.
 - Promotes digital stewardship: thoughtful curation over hasty updates.
 - Transparent and understandable by anyone.
-- Seeks to reignite the value of information before the information is locked away.
+- StoneLeaf seeks to reignite the value of information before the information is locked away.
+- This not about shuttling copyrighted works as much as it is about preserving information and thus culture, history, and education.
 
 > “The structure is not just a file tree — it's a mental map.”
+
+### 
+This framework is built on the principle of durable knowledge in unstable times. In an age of constant connectivity, dynamic content, and digital manipulation, this system serves as a counterbalance: a quiet, resilient archive of trustworthy information that is not easily changed, lost, or corrupted. Its design encourages deliberate authorship and careful curation rather than reactive publishing. The goal is to serve static information with purpose, offering clarity and utility where speed and noise often dominate.
+
+Unlike modern web platforms that depend on scripts, clouds, and servers that can vanish or fail without notice, this framework thrives in minimalist, offline-first environments. It assumes conditions where the power grid may be unreliable, internet access is unavailable, or devices must operate with extreme frugality. The framework is optimized for single-board computers, old hardware, and terminal-based browsers, enabling deployment in environments ranging from rural villages to emergency response stations to remote homesteads.
+
+Information is organized in a deep, methodical hierarchy inspired by systems like Dewey Decimal or Johnny.Decimal. This reinforces the philosophy that organization enhances longevity. Each category, file, and entry point is crafted to be intuitive to navigate without the aid of search engines or GUIs. The structure itself becomes part of the user's understanding — a mental map as much as a file tree.
+
+Importantly, this system encourages a kind of digital stewardship: content is meant to be maintained, not updated hastily. Its simplicity is its security; its transparency is its authority. The use of open protocols like Gopher and plain HTTP means anyone can understand how it works, replicate it, and extend it without proprietary tools. The philosophy is not just about resisting complexity — it is about reclaiming control over how, when, and where knowledge is accessed.
+
 
 ---
 
@@ -158,7 +169,7 @@ sudo rsync -avh --delete ~/stoneleaf/local/ user@[SERVER]:/path/to/library
 - Deletes removed local files from remote
 - Preserves local structure as authoritative
 
-Ensure `rsync` is installed on the remote machine.
+*Ensure `rsync` is installed on the remote machine.*
 
 ---
 
