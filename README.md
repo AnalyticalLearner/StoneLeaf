@@ -117,7 +117,7 @@ library/
 
 ---
 
-## 🏗 Build the Initial Library
+## 🏗 Build the Initial Library Structure
 
 Run the included `dirgen.sh` script in your destination folder to create a blank scaffold (10,100 folders total). The script content is below.
 
