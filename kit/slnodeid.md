@@ -1,0 +1,7 @@
+Node Name: (e.g., StoneLeaf–PublicLibrary)
+Operating Entity: (library, church, cooperative, private steward, etc.)
+Primary Steward(s): (names/titles)
+Physical Location: (address or general region)
+Date Established: (YYYY-MM-DD)
+Moral / Cultural Orientation: (faith-based, civic, educational, family, etc.)
+Public Listing URL or Identifier: (optional link or directory path)
