@@ -142,8 +142,8 @@ Place the provided `index.php` or an HTML index file in the root directory to en
 
 Use this command to generate an index file of your tree:
 
-```bash
-tree > dir.tree.txt && mv dir.tree.txt 00.reference/00.00.index/
+```
+tree -a -I '.*' > tree.txt
 ```
 This file should then be placed in the `00` directory.
 
@@ -157,9 +157,13 @@ This file should then be placed in the `00` directory.
 - Viewable with file-based terminal or GUI browsers
 - Ideal for offline or read-only systems
 
+### Remote Hosting
+- Install a basic web server
+- Deploy StoneLeaf directories at the root or  in a `/stoneleaf` directory.
+
 ### Remote Sync
 
-Use `rsync` to mirror a local copy to a remote host:
+Use `rsync` (or SFTP) to mirror a local copy to a remote host:
 
 ```bash
 sudo rsync -avh --delete ~/stoneleaf/local/ user@[SERVER]:/path/to/library
@@ -175,9 +179,9 @@ sudo rsync -avh --delete ~/stoneleaf/local/ user@[SERVER]:/path/to/library
 
 ## 📥 Populating the Library
 
-- Prefer `.txt`, `.md`, or `.html` for maximum compatibility.
+- Prefer `.txt`, `.md`,  `.csv`, or `.html` for maximum compatibility.
 - Avoid dynamic content or scripts.
-- Audio or video files can be added but will need to be downloaded to be played unless browser is capable and serving from HTTP.
+- Audio or video files can be added but will need to be downloaded to be played unless browser is capable of playing from the HTTP source.
 
 Keep it readable with terminal tools and future-proof for minimal devices.
 
@@ -190,17 +194,9 @@ To share your Stoneleaf instance:
 - Host publicly via HTTP(s) or gopher.
 - Offer `.zip` archives for download.
 - Create magnet links to share archives.
-
+- Include links to other StoneLeaf libraries from within your own using the `peers.md` file.
 
 **Stoneleaf is designed for duplication.**
-
----
-
-## 📁 Examples
-These files are in the `examples` directory.
-
-- **directory.structure.ods**: This is a LibreCalc spreadsheet with a list of all the base directory names created by `dirgen.sh`. This file can help to plan out the named strcuture of your StoneLeaf library.
-The last column is *CONCATENATED* to make it easy to copy the column to a text file or other source.
 
 ---
 
@@ -218,5 +214,4 @@ This project is licensed under the **MIT License**. See [`LICENSE`](https://mit-
 ---
 
 > “When the cloud fails, let your archive stand.”
-```
-# StoneLeaf
+
